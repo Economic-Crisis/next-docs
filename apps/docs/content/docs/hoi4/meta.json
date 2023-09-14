@@ -1,0 +1,15 @@
+{
+  "title": "hoi4",
+  "pages": [
+    "---Guide---",
+    "index",
+    "page-tree",
+    "---API References---",
+    "components",
+    "utils",
+    "mdx",
+    "---Contentlayer---",
+    "contentlayer/index",
+    "contentlayer/internationalization"
+  ]
+}

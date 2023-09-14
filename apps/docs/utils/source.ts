@@ -26,7 +26,7 @@ const headlessTree = buildPageTree(ctx, {
   root: 'docs/headless'
 })
 
-export function getTree(mode: 'ui' | 'headless' | string): PageTree {
+export function getTree(mode: 'ui' | 'headless' | 'hoi4' | string): PageTree {
   if (mode === 'ui') {
     return uiTree
   }

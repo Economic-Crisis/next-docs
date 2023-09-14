@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server'
 
-const allowed = ['ui', 'headless']
+const allowed = ['ui', 'headless', 'hoi4']
 
 export default function middleware(req: NextRequest) {
   const pathname = req.nextUrl.pathname
@@ -19,6 +19,10 @@ export default function middleware(req: NextRequest) {
 
   if (pathname === '/docs') {
     return NextResponse.redirect(new URL('/docs/headless', req.url))
+  }
+
+  if (pathname === '/hoi4') {
+    return NextResponse.redirect(new URL('/docs/hoi4', req.url))
   }
 
   return NextResponse.next()

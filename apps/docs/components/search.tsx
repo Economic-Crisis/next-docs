@@ -37,6 +37,16 @@ export default function CustomSearchDialog(props: SearchDialogProps) {
         >
           UI
         </button>
+        <button
+          className={cn(
+            'border px-2 py-0.5 rounded-md text-xs text-muted-foreground font-medium transition-colors',
+            value === 'ui' && 'text-blue-400 bg-blue-400/10 border-blue-400'
+          )}
+          onClick={() => setTag('hoi4')}
+          tabIndex={-1}
+        >
+          HOI4
+        </button>
       </div>
     </SearchDialog>
   )

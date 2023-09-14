@@ -18,6 +18,7 @@ export default function Layout({
   const [Icon, title, description, version] =
     params.mode === 'ui'
       ? [LayoutIcon, 'Next Docs UI', 'The framework', packageJsonUI.version]
+      : params.mode === 'hoi4' ? [LayoutIcon, 'Hearts of Iron IV', 'WW2 Game', packageJsonUI.version]
       : [
           LibraryIcon,
           'Next Docs Zeta',

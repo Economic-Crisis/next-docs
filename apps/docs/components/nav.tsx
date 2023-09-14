@@ -12,7 +12,7 @@ export function Nav() {
   return (
     <OriginalNav
       title="Next Docs"
-      enableSidebar={mode === 'headless' || mode === 'ui'}
+      enableSidebar={mode === 'headless' || mode === 'ui' || mode === 'hoi4'}
       links={[
         {
           label: 'Github',
@@ -47,6 +47,15 @@ export function Nav() {
             )}
           >
             UI
+          </Link>
+          <Link
+            href="/docs/hoi4"
+            className={cn(
+              'px-2 py-1 rounded-md text-muted-foreground transition-colors hover:text-accent-foreground',
+              mode === 'hoi4' && 'bg-accent text-accent-foreground'
+            )}
+          >
+            HOI4
           </Link>
         </div>
       </div>

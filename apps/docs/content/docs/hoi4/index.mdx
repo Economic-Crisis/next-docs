@@ -1,0 +1,127 @@
+---
+title: hoi4
+description: Getting Started with Next Docs
+---
+
+## Introduction
+
+Next Docs is a library that makes developing a Next.js docs easier, built for
+App Router. It offers server-side functions and headless components.
+
+- Search (using flexsearch)
+- Breadcrumb, Sidebar, TOC Components
+- Additional utilities
+
+It's recommended to use Next Docs with [Tailwind CSS](https://tailwindcss.com) +
+[Radix UI](https://www.radix-ui.com), and
+[Contentlayer](https://www.contentlayer.dev) (or any CMS).
+
+> **Tip:** For normal usages, you can use [Next Docs UI](/docs/ui) instead.
+
+```bash
+npm install next-docs-zeta shiki
+```
+
+### Demo
+
+Open in [CodeSandbox](https://githubbox.com/SonMooSans/next-docs-template).
+
+## Guide
+
+1. #### Choose a Source
+
+   Next Docs has native support for ContentLayer, but any kind of formats and
+   sources are allowed.
+
+   You can refer to this [guide](/docs/headless/contentlayer) to learn how to
+   use Contentlayer with Next Docs.
+
+2. #### Build Page Tree
+
+   A page tree refers to structured data of all pages.
+
+   ```js
+   export const tree = [
+     {
+       type: 'page',
+       name: 'Quick Start',
+       url: '/docs'
+     },
+     {
+       type: 'separator',
+       name: 'Guides'
+     },
+     {
+       type: 'page',
+       name: 'Example',
+       url: '/docs/example'
+     }
+   ]
+   ```
+
+   You can generate the tree using our Contentlayer adapter, or end up with
+   writing your own.
+
+3. #### Create MDX file
+
+   Create `/content/docs/index.mdx`:
+
+   ```mdx
+   ---
+   title: Quick Start
+   description: My cool docs
+   ---
+
+   Hello World
+   ```
+
+4. #### Styling & Fun
+
+   Start styling your docs with headless components provided by Next Docs.
+
+   ```mdx
+   <article>
+     <nav>
+       <p>My App</p>
+       <SearchToggle />
+     </nav>
+     <Sidebar />
+     <MDXContent />
+     <TOC />
+   </article>
+   ```
+
+### Enjoy!
+
+Next Docs offers simple document searching as well as components for building a
+good docs. It is made for flexibility and speed.
+
+Explore the full power of Next Docs:
+
+<Cards>
+
+<Card
+  title="Breadcrumb"
+  href="/docs/components/breadcrumb"
+  description="The navigation component at the top of screen"
+/>
+
+<Card
+  title="TOC"
+  href="/docs/components/toc"
+  description="A Table of Contents with active anchor observer"
+/>
+
+<Card
+  title="Sidebar"
+  href="/docs/components/sidebar"
+  description="The navigation bar at aside of viewport"
+/>
+
+<Card
+  title="Search"
+  href="/docs/utils/search"
+  description="Implement document searching"
+/>
+
+</Cards>
